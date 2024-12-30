@@ -19,7 +19,7 @@ jobs:
       run: cmake --version
     - name: install
       run: |
-        pip install --user -U gcovr
+        pip install gcovr
     - name: prepare
       run: |
         make prepare
