@@ -11,6 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Setup cmake
+      uses: jwlawson/actions-setup-cmake@v2
+      with:
+        cmake-version: '3.31.x'
+    - name: Use cmake
+      run: cmake --version
     - name: install
       run: |
         pip install --user -U gcovr
